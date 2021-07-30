@@ -1,0 +1,247 @@
+*
+{
+  margin: 0;
+  padding: 0;
+
+}
+
+.header {
+  width: 85%;
+  height: 78vh;
+  border: 1px solid whitesmoke;
+  background-color: white;
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+.header h1 {
+  color: black;
+  display: flex;
+  margin-left: 4%;
+  margin-top: 4%;
+}
+
+.header h2 {
+  font-size: medium;
+  display: flex;
+  margin-left: 4%;
+  margin-top: 4%;
+  color: dimgray;
+}
+
+.icon {
+  position: absolute;
+  
+}
+
+.form1 {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form1 input {
+  background-color: rgba(176, 196, 222, 0.493);
+  border: white;
+  min-width: 800px;
+  border-radius: 5px;
+ 
+ 
+}
+@media (max-width:700px) {
+  .form1 input {
+    min-width: 300px;
+      
+  }
+    
+}
+.form1 input {
+  width: 100%;
+  padding: 10px;
+}
+
+.form2 input {
+  background-color: rgba(176, 196, 222, 0.493);
+  border: white;
+  padding: 10px;
+  min-width: 800px;
+  border-radius: 5px;
+   
+}
+
+@media (max-width:700px) {
+  .form2 input {
+    min-width: 300px;
+      
+  }
+    
+}
+.form p {
+  margin-top: 5%;
+  color: blue;
+  float: right;
+  margin-right: 14%;
+  
+}
+.form3 input {
+  background-color: rgba(0, 0, 255, 0.801);
+  position: absolute;
+  margin: 5%;
+  float: left;
+  border-radius: 4px;
+  color: white;
+  border: white;
+  min-width: 120px;
+  height: 6vh;
+}
+@media (max-width:700px) {
+  .form3 input {
+    margin-top: 15%;
+      
+  }
+    
+}
+
+
+/* Sign up css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header1 {
+  width: 85%;
+  height: 130vh;
+  border: 1px solid whitesmoke;
+  background-color: white;
+  margin-top: 5%;
+  margin-left: 8%;
+}
+.header1 h1 {
+  color: black;
+  display: flex;
+  margin-left: 4%;
+  margin-top: 4%;
+}
+.header1 h2 {
+  font-size: medium;
+  display: flex;
+  margin-left: 4%;
+  margin-top: 4%;
+  color: dimgray
+}
+.forms1 {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.forms1 input {
+  background-color: rgba(176, 196, 222, 0.493);
+  border: white;
+  min-width: 800px;
+  border-radius: 5px;
+ 
+ 
+}
+@media (max-width:700px) {
+  .forms1 input {
+    min-width: 300px;
+      
+  }
+    
+}
+.forms1 input {
+  width: 100%;
+  padding: 10px;
+}
+
+.forms2 input {
+  background-color: rgba(176, 196, 222, 0.493);
+  border: white;
+  padding: 10px;
+  min-width: 800px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+@media (max-width:700px) {
+  .forms2 input {
+    min-width: 300px;
+      
+  }
+    
+}
+.forms a {
+  margin-top: 2%;
+  color: blue;
+  float: right;
+  margin-right: 14%;
+  text-decoration: none;
+  
+}
+.forms6 input {
+  background-color: rgba(0, 0, 255, 0.801);
+  position: absolute;
+  margin: 5%;
+  float: left;
+  border-radius: 4px;
+  color: white;
+  border: white;
+  min-width: 120px;
+  height: 6vh;
+}
+@media (max-width:700px) {
+  .forms6 input {
+    margin-top: 15%;
+      
+  }
+    
+}
+.forms3 input {
+  min-width: 800px;
+    margin-bottom: 30px;
+    border: white;
+    padding: 10px;
+    background-color: rgba(176, 196, 222, 0.493);
+    border-radius: 5px;
+   
+}
+@media (max-width:700px) {
+  .forms3 input {
+    min-width: 300px;
+    margin-bottom: 30px;
+      
+  }
+    
+}
+.forms4 input {
+  min-width: 800px;
+    margin-bottom: 30px;
+    border: white;
+    padding: 10px;
+    background-color: rgba(176, 196, 222, 0.493);
+    border-radius: 5px;
+   
+}
+@media (max-width:700px) {
+  .forms4 input {
+    min-width: 300px;
+    margin-bottom: 30px;
+      
+  } 
+}
+.forms5 input {
+  min-width: 800px;
+    margin-bottom: 30px;
+    border: white;
+    padding: 10px;
+    background-color: rgba(176, 196, 222, 0.493);
+    border-radius: 5px;
+   
+}
+@media (max-width:700px) {
+  .forms5 input {
+    min-width: 300px;
+    margin-bottom: 30px;
+      
+  } 
+}
