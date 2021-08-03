@@ -85,7 +85,8 @@
 .form3 input {
   background-color: rgba(0, 0, 255, 0.801);
   position: absolute;
-  margin: 5%;
+  margin: 5.5%;
+   margin-left: 33%;
   float: left;
   border-radius: 4px;
   color: white;
@@ -96,6 +97,7 @@
 @media (max-width:700px) {
   .form3 input {
     margin-top: 15%;
+    margin-left: 5%;
       
   }
     
@@ -115,6 +117,13 @@
   background-color: white;
   margin-top: 5%;
   margin-left: 8%;
+}
+@media (max-width:700px) {
+  .header1 {
+    height: 130vh;
+      
+  }
+    
 }
 .header1 h1 {
   color: black;
@@ -188,14 +197,9 @@
   border: white;
   min-width: 120px;
   height: 6vh;
+  margin-top: 15%;
 }
-@media (max-width:700px) {
-  .forms6 input {
-    margin-top: 15%;
-      
-  }
-    
-}
+
 .forms3 input {
   min-width: 800px;
     margin-bottom: 30px;
@@ -244,4 +248,138 @@
     margin-bottom: 30px;
       
   } 
+}
+
+
+ /* form forgot password */
+ *
+{
+  margin: 0;
+  padding: 0;
+
+}
+
+.header {
+  width: 85%;
+  height: 78vh;
+  border: 1px solid whitesmoke;
+  background-color: white;
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+.header h1 {
+  color: black;
+  display: flex;
+  margin-left: 4%;
+  margin-top: 4%;
+}
+
+.header p {
+  font-size: medium;
+  display: flex;
+  margin-left: 4%;
+  margin-top: 4%;
+  color: dimgray;
+}
+
+.icon {
+  position: absolute;
+  margin-left: 2%;
+  
+}
+
+.forms2-1 {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+
+.forms6-1 input {
+  background-color: rgba(0, 0, 255, 0.801);
+  position: absolute;
+  margin: 5%;
+  border-radius: 4px;
+  float: left;
+  color: white;
+  border: white;
+  min-width: 120px;
+  height: 6vh;
+  margin-left: -40%;
+  margin-top: 8%;
+
+}
+@media (max-width:700px) {
+  .forms6-1 input {
+    margin-top: 15%;
+    position: relative;
+    margin-left: 4%;
+      
+  }
+    
+}
+
+.form3-1 {
+  width: 60%;
+  padding: 10px;
+}
+
+.form3-1 input {
+  background-color: rgba(176, 196, 222, 0.493);
+  border: white;
+  min-width: 800px;
+  border-radius: 5px;
+ margin-left: 4%;
+ 
+}
+@media (max-width:700px) {
+  .form3-1 input {
+    min-width: 300px;
+      
+  }
+    
+}
+.form3-1 input {
+  width: 100%;
+  padding: 10px;
+}
+.form p {
+  margin-top: 4%;
+  color: blue;
+  float: right;
+  margin-right: 14%;
+  
+}
+.form  .shift {
+  margin-top: 4%;
+  color: blue;
+  float: right;
+  margin-right:  46.5%;
+  
+}
+@media (max-width:700px) {
+  .form .shift {
+  margin-top: -9.2%;
+  float: left;
+  margin-left: 15%;
+      
+  }
+    
+}
+.form5-1 a {
+  text-decoration: none;
+}
+.form5-1 p {
+  color: blue;
+  float: left;
+  margin-left: 3%;
+  margin-top: 2%;
+}
+@media (max-width:700px) {
+  .form5-1 p {
+    margin-left: -32%;
+      
+  }
+    
 }

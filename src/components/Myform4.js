@@ -1,4 +1,5 @@
-import React, { useState, payload } from 'react'
+import axios from 'axios'
+import React, { useState, useEffect} from 'react'
 import {FaAddressCard, FaLock,  FaUserAlt} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
@@ -14,40 +15,33 @@ const Form = () => {
     const [password, setPassword] = useState ('')
     const [confirmpassword, setConfirmpassword] = useState ('')
    
-    
-    const history = useHistory();
-        
-    const handleHistory = () => {
-        history.push('/Form');
-    }
-   
-    const onSubmit = ({history}) => {
-        const payload = {
-            email:"eve.holt@reqres.in",
-            password:'pistol'
-        }
-    }
- fetch ('https://reqres.in/api/register', useState,{
-     method: 'POST',
-     headers:{
-         'Accept': 'application/json',
-         'content-type': 'application/json'
-     },
-     body:JSON.stringify(payload)
- })
-   
-       .then(res=> res.json())
-           .then((data) =>{
-               console.log (data);
 
-               
-               if (data.successful) {
-                history.push('/Form')
+    // useEffect(() => {
+    //    if (localStorage.getItem('user-info'))
+    //    history.push('/Form')
+    // },[] )
+   
+
+    async  function signup () {
+          console.warn (name,date,email,password,confirmpassword)
+           const item ={name,date,email,password,confirmpassword}
+           const result = axios.post ('http://reqres.in/api/register',{
+               headers:{
+                   "Content-Type":'application/json',
+                   'Accept':'application/json'
+               },
+               body: JSON.stringify(item)
+           })
+            result = await result.json();
+            // localStorage.setItem('user-info',  JSON.stringify(result))
+            // history.push ('/Form')
+
             
-        } 
-            })
 
-           
+
+        }
+
+     
 
     
     // const submit = (e) => {
@@ -97,7 +91,7 @@ const Form = () => {
                     <label>
                     <FaAddressCard className='icon'/> 
                     <input 
-                         type='text' placeholder='Email' id='email' onChange={(e) =>setEmail(e.target.value)}   value={email}  /> 
+                         type='text' placeholder='email' id='email' onChange={(e) =>setEmail(e.target.value)}   value={email}  /> 
                     </label>
                     </div>
                     <div
@@ -121,7 +115,7 @@ const Form = () => {
 
                     <div className='forms6'>
                     <label>
-                    <input onClick={handleHistory}
+                    <input onClick={signup}
                         type='Submit' value='Sign Up'/> 
                         
                         
@@ -136,6 +130,7 @@ const Form = () => {
         </div>
     )
     }
+
 
 // CSS in JS
 

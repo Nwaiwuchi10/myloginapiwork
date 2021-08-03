@@ -1,47 +1,59 @@
 import {Link} from 'react-router-dom'
-import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useState, payload,  } from 'react'
 import {FaLock,  FaUserAlt} from 'react-icons/fa'
+import { useHistory } from 'react-router-dom';
 
 
 
 const Form = () => {
 
-    const [data, setData]  = useState ({
-        
-        email:'',
-        password:'',
-        
-    })
+   const [email, setEmail] = useState ('')
+   const [password, setPassword] = useState ('')
 
 
-function Handle (e)  {
-       const newdata ={...data}
-       newdata[e.target.id] = e.target.value
-       setData(newdata)
-       console.log(newdata)
-     }
-    
-     const submit = (e) => {
-        e.preventDefault()
-        axios.post('https://reqres.in/api/users',{
-         email: data.email,
-        password: data.password,
-        })
+
+
+
 
     
-        .then(res=> {
-            console.log(res)
-        }    )
-        .catch (error => {
-            console.log(console.error)
+        const history = useHistory();
+        
+        const handleHistory = () => {
+            history.push('/Homepage');
         }
-            )
-         
+      
+
+
+
+
+    const onSubmit = ({history}) => {
+         const payload = {
+             email:"eve.holt@reqres.in",
+             password:'cityslicka'
+         }
+     }
+  fetch ('https://reqres.in/api/login', useState,{
+      method: 'POST',
+      headers:{
+          'Accept': 'application/json',
+          'content-type': 'application/json'
+      },
+      body:JSON.stringify(payload)
+  })
     
-     
-    }
-    
+        .then(res=> res.json())
+            .then((data) =>{
+                console.log (data);
+
+               
+                if (data.successful) {
+                    history.push('/Homepage')
+                
+            } 
+                })
+
+
+       
      
     return (
         <div className='header'> 
@@ -52,13 +64,14 @@ function Handle (e)  {
             <br></br>
             </div>
 
+
             <div className='form' >
-                <form onSubmit={(e)=> submit(e)} >
+                <form  >
                     <div className='form1'>
                     <label>
                     < FaUserAlt className='icon' />  
                     < input 
-                     type='text'  onChange={(e) =>Handle(e) }  id='email' value={data.email} />
+                     type='text' placeholder='Email' id='email' onChange={(e) =>setEmail(e.target.value)}   value={email} />
                     </label>
                     </div>
                       <br></br>
@@ -67,16 +80,16 @@ function Handle (e)  {
                     <label>
                     <FaLock className='icon'/> 
                     <input 
-                         type='password'   onChange={(e) =>Handle(e) }  id='password' value={data.password} /> 
+                         type='password' placeholder='Password' onChange={(e) =>setPassword(e.target.value)}  id='password' value={password}   /> 
                     </label>
                     </div>
 
-                    <Link to='./'><p>Sign Up here</p></Link>
-                   
+                    <Link to='./form2'><p >Sign Up here</p></Link>
+                    <Link to='./Forgetpass'> <p className='shift'>Forgotten password?</p> </Link>
 
                     <div className='form3'>
                     <label>
-                    <input 
+                    <input onClick={handleHistory }
                         type='Submit' value='Sign in'/>
                         
                         
